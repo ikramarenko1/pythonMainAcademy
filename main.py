@@ -1,2 +1,1 @@
-def hello():
-    print('Hello, World!')
+import lesson_5.main
