@@ -1,0 +1,2 @@
+Hello, World! It's a test!
+Some string to copy in another file
