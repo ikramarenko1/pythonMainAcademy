@@ -1,0 +1,5 @@
+It`s a simple strings
+Oh my God!
+Hello, World!
+Hi!
+How are you?
