@@ -1,0 +1,4 @@
+Hello!
+Some strings
+To read from
+FILE!
