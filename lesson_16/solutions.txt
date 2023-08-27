@@ -1,0 +1,279 @@
+Напишіть рекурсивну функцію для обчислення факторіала числа.
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+```
+==========
+
+Реалізуйте рекурсивну функцію для обчислення чисел Фібоначчі.
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+```
+==========
+
+Напишіть рекурсивну функцію для підрахунку суми елементів списку.
+```python
+def sum_of_list(lst):
+    if len(lst) == 0:
+        return 0
+    else:
+        return lst[0] + sum_of_list(lst[1:])
+```
+==========
+
+Створіть рекурсивну функцію для знаходження найбільшого елемента в списку.
+```python
+def max_element(lst):
+    if len(lst) == 1:
+        return lst[0]
+    else:
+        return max(lst[0], max_element(lst[1:]))
+```
+==========
+
+Реалізуйте рекурсивну функцію для обчислення числа степені.
+```python
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    else:
+        return base * power(base, exponent-1)
+```
+==========
+
+Напишіть рекурсивну функцію для обчислення числа цифр у заданому числі.
+```python
+def count_digits(n):
+    if n == 0:
+        return 0
+    else:
+        return 1 + count_digits(n // 10)
+```
+==========
+
+Створіть рекурсивну функцію для обертання рядка навпаки.
+```python
+def reverse_string(s):
+    if len(s) == 0:
+        return s
+    else:
+        return s[-1] + reverse_string(s[:-1])
+```
+==========
+
+Реалізуйте рекурсивну функцію для перевірки паліндрома (слово, яке читається однаково ззаду наперед).
+```python
+def is_palindrome(s):
+    if len(s) <= 1:
+        return True
+    else:
+        return s[0] == s[-1] and is_palindrome(s[1:-1])
+```
+==========
+
+Напишіть рекурсивну функцію для обчислення найбільшого спільного дільника двох чисел.
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+```
+==========
+
+Створіть рекурсивну функцію для обчислення числа комбінацій C(n, k).
+```python
+def combination(n, k):
+    if k == 0 or k == n:
+        return 1
+    else:
+        return combination(n-1, k-1) + combination(n-1, k)
+```
+==========
+
+Реалізуйте рекурсивну функцію для обчислення суми цифр у заданому числі.
+```python
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    else:
+        return n % 10 + sum_of_digits(n // 10)
+```
+==========
+
+Напишіть рекурсивну функцію для обчислення добутку елементів списку.
+```python
+def product_of_list(lst):
+    if len(lst) == 0:
+        return 1
+    else:
+        return lst[0] * product_of_list(lst[1:])
+```
+==========
+
+Створіть рекурсивну функцію для знаходження n-го числа з послідовності Трібоначчі.
+```python
+def tribonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return tribonacci(n-1) + tribonacci(n-2) + tribonacci(n-3)
+```
+==========
+
+Напишіть лямбда-функцію для обчислення квадрату числа.
+```python
+square = lambda x: x**2
+```
+==========
+
+Реалізуйте лямбда-функцію для перевірки, чи є число парним.
+```python
+is_even = lambda x: x % 2 == 0
+```
+==========
+
+Створіть лямбда-функцію для обчислення суми двох чисел.
+```python
+sum_two_numbers = lambda x, y: x + y
+```
+==========
+
+Реалізуйте лямбда-функцію для повернення максимума з двох чисел.
+```python
+max_of_two = lambda x, y: x if x > y else y
+```
+==========
+
+Напишіть лямбда-функцію для обертання рядка навпаки.
+```python
+reverse_str = lambda s: s[::-1]
+```
+==========
+
+Реалізуйте лямбда-функцію для перевірки, чи є рядок паліндромом.
+```python
+is_str_palindrome = lambda s: s == s[::-1]
+```
+==========
+
+Створіть лямбда-функцію для обчислення факторіала числа.
+```python
+factorial_lambda = lambda x: 1 if x == 0 else x * factorial_lambda(x-1)
+```
+==========
+
+Напишіть лямбда-функцію для обчислення добутку двох чисел.
+```python
+product_two_numbers = lambda x, y: x * y
+```
+==========
+
+Використовуючи map(), підніміть до квадрату кожен елемент списку.
+```python
+squared_list = lambda lst: list(map(lambda x: x**2, lst))
+```
+==========
+
+Використовуючи filter(), отримайте парні числа зі списку.
+```python
+even_numbers = lambda lst: list(filter(lambda x: x % 2 == 0, lst))
+```
+==========
+
+Використовуючи reduce(), обчисліть добуток елементів списку.
+```python
+from functools import reduce
+product_elements = lambda lst: reduce(lambda x, y: x * y, lst)
+```
+==========
+
+Використовуючи map(), перетворіть кожний рядок у списку до верхнього регістра.
+```python
+uppercase_strings = lambda lst: list(map(lambda x: x.upper(), lst))
+```
+==========
+
+Використовуючи filter(), отримайте рядки зі списку, довжина яких більше 5.
+```python
+strings_length_gt_5 = lambda lst: list(filter(lambda x: len(x) > 5, lst))
+```
+==========
+
+Використовуючи reduce(), об'єднайте всі рядки у списку.
+```python
+concat_strings = lambda lst: reduce(lambda x, y: x + y, lst)
+```
+==========
+
+Використовуючи map(), конвертуйте кожний рядок у списку в верхній реєстр.
+```python
+uppercase_strings = lambda lst: list(map(lambda s: s.upper(), lst))
+```
+==========
+
+Використовуючи filter(), отримайте рядки зі списку, довжина яких більша за 5.
+```python
+long_strings = lambda lst: list(filter(lambda s: len(s) > 5, lst))
+```
+==========
+
+Використовуючи reduce(), з'єднайте рядки в списку.
+```python
+concatenate_strings = lambda lst: reduce(lambda s1, s2: s1 + s2, lst)
+```
+==========
+
+Використовуючи map(), обчисліть довжину кожного рядка в списку.
+```python
+length_of_strings = lambda lst: list(map(lambda s: len(s), lst))
+```
+==========
+
+Використовуючи filter(), отримайте рядки зі списку, які починаються з літери 'a'.
+```python
+strings_start_with_a = lambda lst: list(filter(lambda s: s.lower().startswith('a'), lst))
+```
+==========
+
+Використовуючи reduce(), знайдіть найдовший рядок в списку.
+```python
+longest_string = lambda lst: reduce(lambda s1, s2: s1 if len(s1) > len(s2) else s2, lst)
+```
+==========
+
+Використовуючи map(), обчисліть факторіал кожного числа в списку.
+```python
+factorials = lambda lst: list(map(lambda x: factorial(x), lst))  # using the previously defined factorial function
+```
+==========
+
+Використовуючи filter(), отримайте прості числа зі списку.
+```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+prime_numbers = lambda lst: list(filter(is_prime, lst))
+```
+==========
+
+Використовуючи reduce(), обчисліть суму чисел у списку.
+```python
+sum_of_numbers = lambda lst: reduce(lambda x, y: x + y, lst)
+```
+==========
