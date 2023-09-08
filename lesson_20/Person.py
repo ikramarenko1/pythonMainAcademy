@@ -8,8 +8,8 @@ class Person:
         self.name = name
         self.age = age
 
-    def about(self):
-        print(f'Ім`я: {self.name}, вiк: {self.age} рiк/рокiв')
+    def __str__(self):
+        return f'Ім`я: {self.name}, вiк: {self.age} рiк/рокiв'
 
     def say_hello(self):
         print(f'Привiт, {self.name}!')
@@ -17,5 +17,5 @@ class Person:
 
 person1 = Person('Михайло', 25)
 
-person1.about()
+print(person1)
 person1.say_hello()

@@ -7,8 +7,8 @@ class Car:
         self.year = year
         self.color = color
 
-    def about(self):
-        print(f'Інформація про автомобіль:\n   Модель: {self.model}\n   Рiк випуску: {self.year}\n   Колiр: {self.color}')
+    def __str__(self):
+        return f'Інформація про автомобіль:\n   Модель: {self.model}\n   Рiк випуску: {self.year}\n   Колiр: {self.color}'
 
     def start_engine(self):
         print(f'Двигун автомобiля {self.model} був успiшно запущений!')
@@ -17,8 +17,8 @@ class Car:
 audi = Car('Audi RS5 Coupe', '2022', 'Space Grey')
 mercedes = Car('Mercedes-Benz c63', '2021', 'White')
 
-audi.about()
+print(audi)
 audi.start_engine()
 
-mercedes.about()
+print(mercedes)
 mercedes.start_engine()

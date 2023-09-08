@@ -7,8 +7,8 @@ class Book:
         self.name = name
         self.author = author
 
-    def about(self):
-        print(f'Iнформацiя про книгу "{self.name}":\n   Назва: "{self.name}"\n   Автор: {self.author}')
+    def __str__(self):
+        return f'Iнформацiя про книгу "{self.name}":\n   Назва: "{self.name}"\n   Автор: {self.author}'
 
     def read(self):
         print(f'Вiтаю! Книга "{self.name}" була повнiстю прочитана!')
@@ -17,7 +17,7 @@ class Book:
 rule10x = Book('10X Rule', 'Grant Cardone')
 atomic_habits = Book('Atomic Habits', 'James Clear')
 
-rule10x.about()
+print(rule10x)
 rule10x.read()
 
-atomic_habits.about()
+print(atomic_habits)
