@@ -29,7 +29,7 @@ class GameCharacter:
             print(f'✅ Персонаж "{self.name}" наносить персонажу "{character.name}" {self.strength} урону. '
                   f'У "{character.name}" залишилось {character.health} хп.')
         else:
-            print(f'❌ Персонаж "{self.name}" не може атакувати "{character.name}"!')
+            print(f'❌ Персонаж "{self.name}" не може атакувати "{character}"!')
 
     def save(self):
         self.history.append((self.health, self.position))
@@ -41,3 +41,36 @@ class GameCharacter:
             print(f'✅ Персонаж "{self.name}" відновив попередній стан!')
         else:
             print(f'❌ Персонаж "{self.name}" не має станів для відновлення.')
+
+
+player1 = GameCharacter('Player 1', 100, 10)
+player2 = GameCharacter('Player 2', 120, 15)
+
+print(player1)
+print(player2)
+
+print('----' * 3)
+
+player1.move(2, 2)
+player2.move(1, 2)
+
+print('----' * 3)
+
+player1.attack(player2)
+
+print('----' * 3)
+
+player1.attack(123)
+
+print('----' * 3)
+
+player2.save()
+
+print('----' * 3)
+
+player1.attack(player2)
+
+print('----' * 3)
+
+player2.restore()
+print(player2)

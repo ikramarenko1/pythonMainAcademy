@@ -1,8 +1,16 @@
-# Створіть клас Кошик, який може містити товари (об'єкти класу Товар).
-# Додайте метод додати_товар, який додає товар до кошика.
+# Кошик: Створіть клас "Кошик", який може містити товари (об'єкти класу Товар).
+# Додайте метод для обчислення загальної вартості всіх товарів у кошику.
+class Product:
+    def __init__(self, name, price, count):
+        self.name = name
+        self.price = price
+        self.count = count
 
-# Розширте клас Кошик, додавши метод загальна_вартість, який обчислює загальну вартість всіх товарів у кошику.
-from Product import Product
+    def __str__(self):
+        return f'Товар {self.name}:\n   Цiна: {self.price} у.о.\n   Кiлькiсть: {self.count}'
+
+    def get_total_cost(self):
+        return f'Загальна вартiсть продукту {self.name} = {self.price * self.count} у.о.'
 
 
 class Cart:
