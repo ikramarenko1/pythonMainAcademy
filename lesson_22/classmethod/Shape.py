@@ -1,6 +1,19 @@
 # Фабрика об'єктів: Створіть клас Shape з класовим методом для створення
 # об'єктів різних геометричних фігур (круг, прямокутник, трикутник).
 class Shape:
+    def __init__(self, name, **characteristics):
+        self.name = name
+        self.characteristics = characteristics
+
+    @property
+    def documentation(self):
+        doc = f'Назва: {self.name}\n'
+        doc += 'Характеристики:\n'
+        for key, value in self.characteristics.items():
+            doc += f'  - {key}: {value}\n'
+
+        return doc
+
     @classmethod
     def create_shape(cls, shape_type, *args):
         shapes = {
@@ -46,3 +59,9 @@ print(f'- Площа прямокутника: {rectangle.area()}')
 
 triangle = Shape.create_shape('triangle', 10, 5)
 print(f'- Площа трикутника {triangle.area()}')
+
+circle_doc = Shape('Circle', radius=25)
+rectangle_doc = Shape('Rectangle', width=10, height=5)
+
+print(circle_doc.documentation)
+print(rectangle_doc.documentation)
